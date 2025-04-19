@@ -1,20 +1,66 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- Configuración básica del documento -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mini PokeApp</title>
+
+    <!-- Enlace al archivo de estilos CSS -->
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+    <!-- Contenedor principal de la aplicación -->
     <main>
+
+        <!-- Título de la app -->
         <h1>Mini PokeApp</h1>
+
+        <!-- Logo oficial de PokéAPI -->
+        <img src="https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png"
+             alt="PokéAPI logo" class="pokeapi-logo" />
+
+        <!-- Barra de búsqueda y botones -->
         <div class="search-box">
             <input type="text" id="pokemon-input" placeholder="Busca un Pokemon" />
-            <button onclick="buscarPokemon()">Buscar</button>
+            <button id="buscar-btn">Buscar</button>
+            <button id="volver-inicio-btn">Inicio</button>
         </div>
+
+        <!-- Contenedor donde se muestran las tarjetas de Pokémon -->
         <section id="pokemon-list"></section>
+
+        <!-- Botón para cargar más resultados -->
+        <div style="text-align: center; margin-top: 20px;">
+            <button id="cargar-mas-btn">Cargar más</button>
+        </div>
+
     </main>
+
+    <!-- Modal para mostrar evoluciones de un Pokémon -->
+    <div id="pokemon-modal" class="modal hidden">
+        <div class="modal-content">
+            <!-- Botón para cerrar el modal -->
+            <span class="close-btn">&times;</span>
+
+            <!-- Aquí se insertan dinámicamente los detalles de evolución -->
+            <div id="modal-details"></div>
+        </div>
+    </div>
+
+    <!-- Enlace al archivo JavaScript principal -->
     <script src="script.js"></script>
+
 </body>
+
+<!-- Pie de página de la aplicación -->
+<footer>
+    <p>
+        © 2025 Mini PokeApp | By Johana Sevillano <br />
+        Datos obtenidos de
+        <a href="https://pokeapi.co/" target="_blank" rel="noopener">PokéAPI</a>.
+    </p>
+</footer>
+
 </html>
